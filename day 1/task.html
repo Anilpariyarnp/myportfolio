@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Fixed Sidebar Facebook Page</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f0f2f5;
+      overflow-x: hidden;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      height: 56px;
+      background: #ffffff;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 15px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .logo {
+      width: 40px;
+      height: 40px;
+      background: #1877f2;
+      border-radius: 50%;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .navbar-center {
+      display: flex;
+      gap: 50px;
+      font-size: 22px;
+    }
+
+    .right-btn {
+      width: 40px;
+      height: 40px;
+      background: #e4e6eb;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    /* LEFT SIDEBAR – FIXED */
+    .sidebar {
+      width: 22%;
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      height: calc(100vh - 70px);
+      position: fixed;
+      top: 70px;
+      left: 15px;
+      overflow-y: auto;
+    }
+
+    .sidebar-item {
+      padding: 12px 5px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .sidebar-item:hover {
+      background: #f0f2f5;
+    }
+
+    /* RIGHT SIDEBAR – FIXED */
+    .rightbar {
+      width: 22%;
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      height: calc(100vh - 70px);
+      position: fixed;
+      top: 70px;
+      right: 15px;
+      overflow-y: auto;
+    }
+
+    /* FEED – SCROLLABLE */
+    .feed {
+      width: 50%;
+      margin: 80px auto 20px auto;
+    }
+
+    .create-post {
+      background: white;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .create-post textarea {
+      width: 100%;
+      height: 60px;
+      border: none;
+      outline: none;
+      resize: none;
+      font-size: 15px;
+    }
+
+    .post {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      margin-bottom: 15px;
+    }
+
+    .post-img {
+      width: 100%;
+      height: 200px;
+      background: #c7d7ff;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="logo">f</div>
+
+    <div class="navbar-center">
+      🏠      🎥      🛒 👥
+    </div>
+
+    <div class="right-btn">👤</div>
+  </div>
+
+  <!-- LEFT SIDEBAR (fixed) -->
+  <div class="sidebar">
+    <div class="sidebar-item">👤 Your Profile</div>
+    <div class="sidebar-item">🖼️ Photos</div>
+    <div class="sidebar-item">👥 Friends</div>
+    <div class="sidebar-item">🛒 Marketplace</div>
+    <div class="sidebar-item">📺 Watch</div>
+  </div>
+
+  <!-- CENTER FEED -->
+  <div class="feed">
+
+    <div class="create-post">
+      <textarea placeholder="What's on your mind?"></textarea>
+    </div>
+
+    <div class="post">
+      <strong>Anil Pariyar</strong>
+      <p>Enjoying the day! ☀️</p>
+      <div class="post-img"></div>
+    </div>
+
+    <div class="post">
+      <strong>Maya Koirala</strong>
+      <p>Beautiful views from the hills! 🏔️</p>
+      <div class="post-img" style="background:#ffe5b4;"></div>
+    </div>
+
+    <div class="post">
+      <strong>John</strong>
+      <p>Chilling with friends 😎</p>
+      <div class="post-img" style="background:#b4ffce;"></div>
+    </div>
+
+  </div>
+
+  <!-- RIGHT SIDEBAR (fixed) -->
+  <div class="rightbar">
+    <h4>Contacts</h4>
+    <p>🟢 Ramesh</p>
+    <p>🟢 Sita</p>
+    <p>🟢 Prabhat</p>
+    <p>🟢 Milan</p>
+  </div>
+
+</body>
+</html>
