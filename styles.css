@@ -440,3 +440,50 @@ nav {
     font-size: 2.5rem;
   }
 }
+
+/* === ADD THIS AT THE VERY END OF YOUR CURRENT styles.css === */
+
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+
+.project-link:hover .project-card {
+  transform: translateY(-16px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(124, 58, 237, 0.25);
+}
+
+/* Make Behance button EXACTLY like Dribbble button */
+.behance-btn {
+  background: white;
+  color: var(--primary);
+  margin-left: 1.5rem;
+}
+
+.behance-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(124, 58, 237, 0.3);
+}
+
+.view-all-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .view-all-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .behance-btn {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}
